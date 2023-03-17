@@ -1,9 +1,7 @@
 # KanvasReplication (CVE-9J75-75999)
 
 <p align="center">
-  
-![image](https://media.discordapp.net/attachments/1084179084822712453/1086314916656447631/cooltext431841657363960.png)
-  
+<img width="320" height="168" src="https://github.com/HappinessResearchLab/KanvasReplication/blob/main/images/kanvasreplication_logo.png?raw=true">
 </p>
 
 <table align="center">
@@ -28,6 +26,14 @@
 <td>September 19th, 2022 (RendezVous)</td>
 </tr>
 </table>
+
+### Technical details
+
+This repository contains a PoC that exploits this vulnerability to perform the following operations:
+
+- Send a RDV payload that is stored in the remote console stack. Part of the payload is used to overwrite the return address of the function, making the game execute the elf immediately. The PoC only implements sending payloads of 0x75 bytes.
+
+**NOTE:** The PoC requires an old version of Daphne that implements MARIKO communications
 
 ## Credits
 While this vulnerability was discovered by multiple users independently, many of them decided to keep the vulnerability information private. However, the folowing people are responsible for safely disclosing the vulnerability to Erista:
